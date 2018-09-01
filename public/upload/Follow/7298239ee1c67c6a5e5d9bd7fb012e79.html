@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>测试</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "http://127.0.0.1/debug",
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+<button type="button" id="btn">提交</button>
+</body>
+</html>
